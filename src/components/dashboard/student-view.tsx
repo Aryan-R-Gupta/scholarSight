@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useTransition } from "react";
-import { BrainCircuit, BookOpen } from "lucide-react";
+import { BrainCircuit, BookOpen, LineChart } from "lucide-react";
 import {
   Card,
   CardContent,
@@ -21,6 +21,7 @@ import type {
   InterpretStudentPerformanceOutput,
   RecommendPersonalizedStudyPlanOutput,
 } from "@/ai/flows";
+import { PerformanceChart } from "./performance-chart";
 
 export function StudentView({ student }: { student: Student }) {
   const { toast } = useToast();
@@ -111,12 +112,15 @@ export function StudentView({ student }: { student: Student }) {
 
       <div className="md:col-span-2">
         <Tabs defaultValue="analysis" className="w-full">
-          <TabsList className="grid w-full grid-cols-2">
+          <TabsList className="grid w-full grid-cols-3">
             <TabsTrigger value="analysis">
               <BrainCircuit className="mr-2 h-4 w-4" /> Performance Analysis
             </TabsTrigger>
             <TabsTrigger value="study-plan">
               <BookOpen className="mr-2 h-4 w-4" /> Study Plan
+            </TabsTrigger>
+            <TabsTrigger value="performance-graph">
+              <LineChart className="mr-2 h-4 w-4" /> Performance Graph
             </TabsTrigger>
           </TabsList>
           <TabsContent value="analysis">
@@ -204,6 +208,19 @@ export function StudentView({ student }: { student: Student }) {
                     </div>
                   </div>
                 )}
+              </CardContent>
+            </Card>
+          </TabsContent>
+          <TabsContent value="performance-graph">
+            <Card>
+              <CardHeader>
+                <CardTitle>Academic Performance Over Time</CardTitle>
+                <CardDescription>
+                  Visualizing past and predicted academic scores.
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <PerformanceChart data={student.performanceHistory} />
               </CardContent>
             </Card>
           </TabsContent>

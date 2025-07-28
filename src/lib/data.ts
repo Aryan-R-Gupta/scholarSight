@@ -9,6 +9,12 @@ export const students: Student[] = [
     attendanceRate: 0.95,
     previousGrades: { Mathematics: "A", Physics: "A-", Literature: "B+" },
     predictedPerformance: "Pass",
+    performanceHistory: [
+      { year: 2022, score: 78, type: "past" },
+      { year: 2023, score: 82, type: "past" },
+      { year: 2024, score: 88, type: "past" },
+      { year: 2025, score: 90, type: "predicted" },
+    ],
   },
   {
     id: "s2",
@@ -18,6 +24,12 @@ export const students: Student[] = [
     attendanceRate: 0.78,
     previousGrades: { Mathematics: "C+", Physics: "C", Literature: "B-" },
     predictedPerformance: "Fail",
+    performanceHistory: [
+      { year: 2022, score: 70, type: "past" },
+      { year: 2023, score: 65, type: "past" },
+      { year: 2024, score: 62, type: "past" },
+      { year: 2025, score: 58, type: "predicted" },
+    ],
   },
   {
     id: "s3",
@@ -27,6 +39,12 @@ export const students: Student[] = [
     attendanceRate: 0.98,
     previousGrades: { Mathematics: "A", Physics: "A", Literature: "A" },
     predictedPerformance: "Pass",
+    performanceHistory: [
+      { year: 2022, score: 85, type: "past" },
+      { year: 2023, score: 88, type: "past" },
+      { year: 2024, score: 92, type: "past" },
+      { year: 2025, score: 94, type: "predicted" },
+    ],
   },
   {
     id: "s4",
@@ -36,6 +54,12 @@ export const students: Student[] = [
     attendanceRate: 0.85,
     previousGrades: { Mathematics: "B", Physics: "B-", Literature: "B+" },
     predictedPerformance: "Pass",
+    performanceHistory: [
+      { year: 2022, score: 68, type: "past" },
+      { year: 2023, score: 72, type: "past" },
+      { year: 2024, score: 75, type: "past" },
+      { year: 2025, score: 78, type: "predicted" },
+    ],
   },
   {
     id: "s5",
@@ -45,5 +69,11 @@ export const students: Student[] = [
     attendanceRate: 0.91,
     previousGrades: { Mathematics: "C", Physics: "B-", Literature: "C+" },
     predictedPerformance: "Fail",
+    performanceHistory: [
+      { year: 2022, score: 65, type: "past" },
+      { year: 2023, score: 60, type: "past" },
+      { year: 2024, score: 58, type: "past" },
+      { year: 2025, score: 62, type: "predicted" },
+    ],
   },
 ];

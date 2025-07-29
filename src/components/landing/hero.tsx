@@ -40,7 +40,7 @@ export function Hero() {
             playsInline
             className="rounded-xl shadow-2xl"
           >
-            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+            <source src="/hero-video.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
           <div className="absolute -bottom-8 -left-8 bg-card p-4 rounded-xl shadow-lg border hidden lg:flex items-center gap-4 animate-in fade-in zoom-in-95 duration-500">

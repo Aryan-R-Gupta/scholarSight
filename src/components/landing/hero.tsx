@@ -40,15 +40,6 @@ export function Hero() {
             <source src="/hero-video.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
-          <div className="absolute -bottom-8 -left-8 bg-card p-4 rounded-xl shadow-lg border hidden lg:flex items-center gap-4 animate-in fade-in zoom-in-95 duration-500">
-            <div className="p-3 bg-primary/10 rounded-full">
-              <BrainCircuit className="h-8 w-8 text-primary" />
-            </div>
-            <div>
-              <p className="font-bold">AI Analysis Complete</p>
-              <p className="text-sm text-muted-foreground">Generated 5 personalized study plans.</p>
-            </div>
-          </div>
         </div>
       </div>
     </section>

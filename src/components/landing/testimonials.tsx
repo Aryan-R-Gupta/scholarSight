@@ -5,21 +5,21 @@ const testimonials = [
   {
     name: "Dr. Sarah Johnson",
     title: "Principal, Northwood High",
-    avatar: "https://placehold.co/40x40.png",
+    avatar: "https://placehold.co/100x100.png",
     text: "ScholarSight has been a game-changer. The ability to identify at-risk students before they fall behind is invaluable. It's transformed our approach to student support.",
     aiHint: "educator headshot"
   },
   {
     name: "Mr. David Chen",
     title: "11th Grade Teacher",
-    avatar: "https://placehold.co/40x40.png",
+    avatar: "https://placehold.co/101x101.png",
     text: "The AI-generated study plans are incredibly detailed and helpful. It saves me time and gives my students a clear, actionable path to improvement. I can't imagine teaching without it now.",
      aiHint: "teacher portrait"
   },
   {
     name: "Emily Rodriguez",
     title: "University Student",
-    avatar: "https://placehold.co/40x40.png",
+    avatar: "https://placehold.co/102x102.png",
     text: "Seeing my predicted performance and getting a custom study plan was so motivating. The AI analysis helped me understand exactly where I needed to focus my energy.",
      aiHint: "student headshot"
   },

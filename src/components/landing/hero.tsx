@@ -22,11 +22,8 @@ export function Hero() {
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
             <Button asChild size="lg" className="text-base">
               <Link href="/dashboard">
-                Get Started Free <ArrowRight className="ml-2 h-5 w-5" />
+                Sign In <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
-            </Button>
-            <Button asChild variant="outline" size="lg" className="text-base">
-              <Link href="#">Book a Demo</Link>
             </Button>
           </div>
         </div>

@@ -18,9 +18,6 @@ export function Cta() {
           <Button asChild size="lg">
             <Link href="/dashboard">Get Started</Link>
           </Button>
-          <Button asChild variant="outline" size="lg">
-            <Link href="#">Book a Demo</Link>
-          </Button>
         </div>
       </div>
     </section>

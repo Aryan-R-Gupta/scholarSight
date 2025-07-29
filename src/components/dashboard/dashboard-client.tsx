@@ -35,8 +35,34 @@ export function DashboardClient({
 
   const currentStudent = students.find((s) => s.id === selectedStudentId);
 
+  const renderView = () => {
+    switch (role) {
+      case "administrator":
+        return <AdminView students={students} />;
+      case "teacher":
+        return (
+           <div className="space-y-8">
+            <header className="mb-8">
+              <h1 className="text-4xl font-bold tracking-tight">
+                Teacher Dashboard
+              </h1>
+              <p className="text-muted-foreground mt-2">
+                Monitor your students' performance and provide support.
+              </p>
+            </header>
+            <TeacherView students={students} />
+          </div>
+        );
+      case "student":
+        return currentStudent ? <StudentView student={currentStudent} /> : null;
+      default:
+        return null;
+    }
+  }
+
+
   return (
-    <div className="flex flex-col h-full">
+    <div className="flex flex-col h-full bg-background">
       <Header
         role={role}
         setRole={setRole}
@@ -45,11 +71,7 @@ export function DashboardClient({
         students={students}
       />
       <main className="flex-1 p-4 sm:p-6 md:p-8">
-        {role === "administrator" && <AdminView students={students} />}
-        {role === "teacher" && <TeacherView students={students} />}
-        {role === "student" && currentStudent && (
-          <StudentView student={currentStudent} />
-        )}
+       {renderView()}
       </main>
     </div>
   );

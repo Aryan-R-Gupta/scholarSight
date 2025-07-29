@@ -1,6 +1,7 @@
 "use client";
 
-import { GraduationCap, RefreshCw } from "lucide-react";
+import Link from "next/link";
+import { GraduationCap, RefreshCw, LogOut } from "lucide-react";
 import {
   Select,
   SelectContent,
@@ -10,6 +11,7 @@ import {
 } from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
 import type { Role, Student } from "@/lib/types";
+import { SparklesIcon } from "../ui/icons";
 
 interface HeaderProps {
   role: Role;
@@ -31,11 +33,14 @@ export function Header({
   };
 
   return (
-    <header className="sticky top-0 z-10 flex h-16 items-center gap-4 border-b bg-background/80 px-4 backdrop-blur-sm md:px-6">
-      <div className="flex items-center gap-2 font-semibold">
-        <GraduationCap className="h-6 w-6 text-primary" />
-        <span className="text-lg">ScholarSight</span>
-      </div>
+    <header className="sticky top-0 z-30 flex h-16 items-center gap-4 border-b bg-background/80 px-4 backdrop-blur-sm md:px-6">
+      <Link
+        href="/"
+        className="flex items-center gap-2 font-semibold text-lg"
+      >
+        <SparklesIcon className="h-6 w-6 text-primary" />
+        <span className="font-bold tracking-tight">ScholarSight</span>
+      </Link>
       <div className="flex w-full items-center gap-4 md:ml-auto md:gap-2 lg:gap-4">
         <div className="ml-auto flex items-center gap-4">
           <Select
@@ -71,6 +76,12 @@ export function Header({
           <Button variant="outline" size="icon" onClick={handleRefresh}>
             <RefreshCw className="h-4 w-4" />
             <span className="sr-only">Refresh</span>
+          </Button>
+          <Button variant="ghost" size="icon" asChild>
+            <Link href="/">
+              <LogOut className="h-4 w-4" />
+              <span className="sr-only">Logout</span>
+            </Link>
           </Button>
         </div>
       </div>

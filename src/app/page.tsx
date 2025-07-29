@@ -1,17 +1,23 @@
-import { DashboardClient } from "@/components/dashboard/dashboard-client";
-import type { Role } from "@/lib/types";
+import { Cta } from "@/components/landing/cta";
+import { Features } from "@/components/landing/features";
+import { Footer } from "@/components/landing/footer";
+import { Header } from "@/components/landing/header";
+import { Hero } from "@/components/landing/hero";
+import { HowItWorks } from "@/components/landing/how-it-works";
+import { Testimonials } from "@/components/landing/testimonials";
 
-export default function Home({
-  searchParams,
-}: {
-  searchParams: { role?: Role; studentId?: string };
-}) {
-  const role = searchParams.role || "teacher";
-  const studentId = searchParams.studentId || "s1";
-
+export default function LandingPage() {
   return (
-    <div className="min-h-screen bg-background text-foreground">
-      <DashboardClient initialRole={role} initialStudentId={studentId} />
+    <div className="flex flex-col min-h-screen bg-background">
+      <Header />
+      <main className="flex-1">
+        <Hero />
+        <Features />
+        <HowItWorks />
+        <Testimonials />
+        <Cta />
+      </main>
+      <Footer />
     </div>
   );
 }

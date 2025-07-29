@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { Button } from "../ui/button";
 import { ArrowRight, BrainCircuit } from "lucide-react";
-import Image from 'next/image';
 
 export function Hero() {
   return (
@@ -32,14 +31,18 @@ export function Hero() {
           </div>
         </div>
         <div className="relative">
-           <Image
-            src="https://placehold.co/600x400.png"
-            alt="ScholarSight Dashboard"
-            width={600}
-            height={400}
+          <video
+            width="600"
+            height="400"
+            autoPlay
+            muted
+            loop
+            playsInline
             className="rounded-xl shadow-2xl"
-            data-ai-hint="student dashboard"
-          />
+          >
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
           <div className="absolute -bottom-8 -left-8 bg-card p-4 rounded-xl shadow-lg border hidden lg:flex items-center gap-4 animate-in fade-in zoom-in-95 duration-500">
             <div className="p-3 bg-primary/10 rounded-full">
               <BrainCircuit className="h-8 w-8 text-primary" />
